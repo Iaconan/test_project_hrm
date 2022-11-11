@@ -3,7 +3,7 @@ import { Card, CardActions, CardContent, Button, Typography, ButtonBase } from '
 import DeleteIcon from '@material-ui/icons/Delete';
 import MoreHorizIcon from '@material-ui/icons/MoreHoriz';
 import { useDispatch } from 'react-redux';
-import { useHistory } from 'react-router-dom';
+// import { useHistory } from 'react-router-dom';
 
 import { deletePost } from '../../../actions/posts';
 import useStyles from './styles';
@@ -11,7 +11,7 @@ import useStyles from './styles';
 const Post = ({ post, setCurrentId }) => {
   const user = JSON.parse(localStorage.getItem('profile'));
   const dispatch = useDispatch();
-  const history = useHistory();
+  // const history = useHistory();
   const classes = useStyles();
 
   const userId = user?.result.googleId || user?.result?._id;
